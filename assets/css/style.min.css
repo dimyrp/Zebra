@@ -917,6 +917,9 @@ body {
       color: #06B5A9; }
 
 @media (max-width: 1800px) {
+  .nav .vkladki div:hover .menu {
+    width: 700px;
+    height: 350px; }
   .polosa .content {
     width: 90%; }
   .categories .cont {
@@ -930,6 +933,9 @@ body {
     width: 90%; } }
 
 @media (max-width: 1400px) {
+  .nav .vkladki div:hover .menu {
+    width: 600px;
+    height: 300px; }
   .polosa .content {
     width: 100%; }
   .slick-arrow {
