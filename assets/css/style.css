@@ -2,6 +2,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap");
+
 *,
 *:before,
 *:after {
@@ -367,6 +369,10 @@ textarea {
     padding: 0.2em 0;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     font-size: calc(14px + 4 * ((100vw - 320px) / 960));
     background-color: black;
@@ -467,7 +473,7 @@ body {
     display: -ms-flexbox;
     display: flex;
     top: 100%;
-    transition: top .5s;
+    transition: top .7s;
     height: 400px;
     opacity: 1;
     z-index: -2;
@@ -483,13 +489,13 @@ body {
 }
 
 .nav .vkladki div .menu {
-    display: table-cell;
+    display: -ms-flexbox;
+    display: flex;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     background-color: #CF1A2B;
     color: #FFFFFF;
-    height: 100px;
+    height: 400px;
     width: 800px;
-    width: 400%;
     position: absolute;
     left: 0;
     top: -700%;
@@ -650,16 +656,31 @@ body {
     z-index: -1;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 1000px;
     top: 0;
     left: 0;
     background-position: center;
 }
 
-.zebra div {
+.zebrak {
+    background-image: url(../images/zebra.jpg);
+}
+
+.zebra .zfon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00ffe1;
+    opacity: .2;
+    z-index: -2;
+}
+
+.zebra #d {
     color: #FFFFFF;
     text-transform: uppercase;
-    background-color: rgba(0, 255, 225, 0.2);
+    min-width: 0;
     width: 100%;
     height: 100%;
     display: -ms-flexbox;
@@ -672,23 +693,471 @@ body {
     align-items: center;
 }
 
-.zebra div h2 {
+.zebra #d h2 {
     font-weight: 100;
-    position: relative;
-    left: 16px;
+    width: 575px;
     font-size: 28px;
     letter-spacing: 38px;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.zebra div h1 {
+.zebra #d h1 {
+    line-height: 150px;
     font-size: 128px;
     letter-spacing: -2px;
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
     font-weight: 700;
 }
 
-.text_decor {
-    text-decoration: underline;
-    transition: linear 1s;
+.pidarasik {
+    background-image: url(../images/pidarasik.jpg);
+}
+
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-track {
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 0;
+}
+
+.slick-arrow {
+    font-size: 0;
+    width: 150px;
+    height: 90vh;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    border: none;
+}
+
+.slick-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color .5s;
+}
+
+.slick-prev {
+    background: url(../images/Shape3.svg) 50% 55%/40% no-repeat;
+    left: 0px;
+}
+
+.slick-next {
+    background: url(../images/Shape3copy.svg) 50% 55%/40% no-repeat;
+    right: 0px;
+}
+
+.polosa {
+    position: relative;
+    top: -10vh;
+    width: 100%;
+    height: 400px;
+    background-color: #FFFFFF;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.polosa .content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 70%;
+    height: 80%;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 34px;
+}
+
+.polosa .content a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.polosa .content a:hover .content_item {
+    font-size: 38px;
+    width: 320px;
+    height: 320px;
+    transition: .7s;
+}
+
+.polosa .content a:hover .content_item h3 {
+    font-size: 70px;
+    transition: .7s;
+}
+
+.polosa .content a:hover .content_item h2 {
+    font-size: 28px;
+    transition: .7s;
+}
+
+.polosa .content a:hover .content_item .ttr {
+    font-size: 22px;
+    transition: .7s;
+}
+
+.polosa .content a:hover .content_item .jj {
+    font-size: 42px;
+    transition: font-size .7s;
+}
+
+.polosa .content a:hover .content_item .ll h2 {
+    font-size: 80px;
+    transition: font-size .7s;
+}
+
+.polosa .content a:hover .content_item .ll h1 {
+    font-size: 140px;
+    transition: font-size .7s;
+}
+
+.polosa .content a:hover .jj {
+    text-align: center;
+}
+
+.polosa .content a:hover .jj span {
+    font-size: 44px;
+    transition: font-size .7s;
+}
+
+.polosa .content_item {
+    position: relative;
+    padding: 30px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+}
+
+.polosa .content_item img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.polosa .content_item h3 {
+    font-size: 64px;
+}
+
+.polosa .content_item h2 {
+    font-size: 20px;
+}
+
+.polosa .content .one {
+    background: #58DBD3;
+}
+
+.polosa .content .one h3 {
+    color: #12867F;
+}
+
+.polosa .content .one h2 {
+    font-size: 24px;
+}
+
+.polosa .content .two {
+    background: #E4CE9A;
+}
+
+.polosa .content .two h3 {
+    color: #5E4C38;
+}
+
+.polosa .content .tree {
+    background: #FFA7CE;
+}
+
+.polosa .content .tree h3 {
+    color: #414049;
+}
+
+.polosa .content .chetire {
+    background: #F2CA66;
+    padding: 15px;
+}
+
+.polosa .content .chetire h1 {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    font-size: 130px;
+    font-weight: 600;
+}
+
+.polosa .content .chetire h2 {
+    font-size: 72px;
+    position: relative;
+    top: 1px;
+    left: 58px;
+}
+
+.polosa .content .chetire .jj {
+    font-size: 42px;
+    padding: 5px;
+    width: 60%;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    z-index: 1;
+    color: #F2CA66;
+}
+
+.categories {
+    background-image: url(../images/Layer.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    top: -101px;
+    width: 100%;
+    height: 1000px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.categories .cont {
+    width: 100%;
+    height: 460px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.categories .cont_item {
+    position: absolute;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: rgba(88, 219, 211, 0.5);
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+}
+
+.categories .cont_item img {
+    height: 50%;
+    width: 50%;
+}
+
+.categories .cont_item:first-child {
+    left: -150px;
+}
+
+.categories .cont_item:nth-child(2) {
+    left: 4.5%;
+    top: 0;
+}
+
+.categories .cont_item:nth-child(3) {
+    bottom: 70px;
+    left: 17%;
+    background-color: rgba(88, 219, 211, 0.7);
+}
+
+.categories .cont_item:nth-child(4) {
+    left: 29%;
+    top: 11px;
+}
+
+.categories .cont_item:nth-child(5) {
+    background-color: rgba(88, 219, 211, 0.7);
+}
+
+.categories .cont_item:nth-child(5) img {
+    height: 48%;
+    width: 88%;
+    position: relative;
+    top: 3%;
+    left: 0.5%;
+}
+
+.categories .cont_item:nth-child(6) {
+    left: 55%;
+    bottom: 70px;
+}
+
+.categories .cont_item:nth-child(7) {
+    left: 67%;
+    top: 16px;
+    background-color: rgba(88, 219, 211, 0.7);
+}
+
+.categories .cont_item:nth-child(8) {
+    left: 78%;
+    bottom: 0;
+}
+
+.categories .cont_item:nth-child(9) {
+    left: 90%;
+    background-color: rgba(88, 219, 211, 0.7);
+}
+
+.categories h1 {
+    font-family: 'Josefin Slab';
+    z-index: 1;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 116px;
+    margin: 40px 0 60px;
+}
+
+.categories .fon {
+    background-color: rgba(89, 0, 255, 0.2);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.sect2 {
+    position: relative;
+    bottom: 351px;
+    width: 100%;
+    height: 1000px;
+    background-color: #FDFDFD;
+}
+
+.sect2 .gran {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.block {
+    position: absolute;
+    top: -20px;
+}
+
+.block img:last-child {
+    width: 17px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: -12px;
+}
+
+.block img:nth-child(2) {
+    z-index: 3;
+}
+
+.block img:first-child {
+    width: 17px;
+    height: 20px;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: -12px;
+}
+
+.content1 {
+    width: 100%;
+    height: 550px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.content1 .subcontent {
+    padding: 30px;
+    width: 60%;
+}
+
+.content1 .subcontent .oplata {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.content1 .subcontent .oplata div {
+    font-size: 36px;
+}
+
+.content1 .subcontent .oplata div span {
+    font-weight: bold;
+}
+
+.content1 .subcontent .oplata button {
+    height: 50px;
+    width: 216px;
+    background-color: #D62132;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 28px;
+    border: none;
+    color: #FFFFFF;
+}
+
+.content1 .subcontent .oplata button:hover {
+    background: url(../images/pidarasik.jpg);
+    transition: background .7s;
+    background-position: 0 80%;
+    background-size: cover;
+    height: 70px;
+    width: 236px;
+    transition: .7s;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 3px;
+}
+
+.content1 .subcontent .oplata button span {
+    font-weight: normal;
+    position: relative;
+    right: 3px;
+}
+
+.content1 .subcontent .oplata button img {
+    position: relative;
+    bottom: 3px;
+    left: 3px;
+}
+
+.content1 .subcontent h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.content1 .subcontent .riba {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 25px;
+    margin: 30px 0;
 }

@@ -105,7 +105,7 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\njquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(() => {\r\n   //let str = `window location is ${window.location}`;\r\n   //console.log(str);\r\n   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.upperzebr').slick();\r\n});\r\n\r\n\n\n//# sourceURL=webpack:///./src/assets/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\njquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(() => {\r\n   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.upperzebr').slick();\r\n   //$('.content2').slick();\r\n});\r\n\r\n\n\n//# sourceURL=webpack:///./src/assets/js/app.js?");
 
 /***/ }),
 
@@ -116,7 +116,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jque
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log('file 2');\r\n\n\n//# sourceURL=webpack:///./src/assets/js/file2.js?");
+eval("\n\n//# sourceURL=webpack:///./src/assets/js/file2.js?");
 
 /***/ }),
 

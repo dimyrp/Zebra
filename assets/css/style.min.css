@@ -335,14 +335,17 @@ textarea {
   box-sizing: border-box; }
 
 body {
+  min-height: 100vh;
+  margin: 0px;
+  padding: 0px;
   font-size: calc(14px + 4 * ((100vw - 320px) / 960));
   background-color: black;
-  font-family: 'Noto Sans';
-  height: 10001px; }
+  font-family: 'Noto Sans'; }
 
 .header {
   box-shadow: 5px 0 10px;
   position: fixed;
+  height: 90px;
   width: 100%;
   z-index: 50; }
   .header .hfon {
@@ -416,7 +419,6 @@ body {
         color: #FFFFFF;
         height: 400px;
         width: 800px;
-        width: 400%;
         position: absolute;
         left: 0;
         top: -700%; }
@@ -440,7 +442,7 @@ body {
           /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/ }
         .nav .vkladki div .menu a:hover:after,
         .nav .vkladki div .menu a:focus:after {
-          dth: 100%; }
+          width: 100%; }
         .nav .vkladki div .menu a:hover {
           color: #FFFFFF; }
         .nav .vkladki div .menu .center, .nav .vkladki div .menu .right {
@@ -517,12 +519,10 @@ body {
   z-index: -1;
   background-size: cover;
   width: 100%;
-  height: 1000px;
+  height: 100vh;
   top: 0;
   left: 0;
   background-position: center; }
-  .zebrak {
-    background-image: url(../images/zebra.jpg); }
   .zebra .zfon {
     position: absolute;
     top: 0;
@@ -560,7 +560,8 @@ body {
 
 .slick-track {
   display: flex;
-  min-width: 0; }
+  min-width: 0;
+  height: 100%; }
 
 .slick-arrow {
   font-size: 0;
@@ -584,7 +585,6 @@ body {
 
 .polosa {
   position: relative;
-  top: -10vh;
   width: 100%;
   height: 400px;
   background-color: #FFFFFF;
@@ -594,14 +594,43 @@ body {
   .polosa .content {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 70%;
-    height: 80%;
+    height: 100%;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 34px; }
     .polosa .content a {
       color: #FFFFFF;
       text-decoration: none; }
+      .polosa .content a:hover .content_item {
+        font-size: 38px;
+        width: 320px;
+        height: 320px;
+        transition: .7s; }
+        .polosa .content a:hover .content_item h3 {
+          font-size: 70px;
+          transition: .7s; }
+        .polosa .content a:hover .content_item h2 {
+          font-size: 28px;
+          transition: .7s; }
+        .polosa .content a:hover .content_item .ttr {
+          font-size: 22px;
+          transition: .7s; }
+        .polosa .content a:hover .content_item .jj {
+          font-size: 42px;
+          transition: font-size .7s; }
+        .polosa .content a:hover .content_item .ll h2 {
+          font-size: 80px;
+          transition: font-size .7s; }
+        .polosa .content a:hover .content_item .ll h1 {
+          font-size: 140px;
+          transition: font-size .7s; }
+      .polosa .content a:hover .jj {
+        text-align: center; }
+        .polosa .content a:hover .jj span {
+          font-size: 44px;
+          transition: font-size .7s; }
     .polosa .content_item {
       position: relative;
       padding: 30px;
@@ -618,12 +647,11 @@ body {
       .polosa .content_item h3 {
         font-size: 64px; }
       .polosa .content_item h2 {
-        font-size: 24px; }
+        font-size: 20px; }
     .polosa .content .one {
       background: #58DBD3; }
       .polosa .content .one h3 {
-        color: #12867F;
-        font-size: 64px; }
+        color: #12867F; }
       .polosa .content .one h2 {
         font-size: 24px; }
     .polosa .content .two {
@@ -663,9 +691,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  top: -101px;
   width: 100%;
-  height: 1000px;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -690,25 +717,32 @@ body {
         height: 50%;
         width: 50%; }
       .categories .cont_item:first-child {
-        left: -150px; }
+        transform: translateX(-50%);
+        left: 0; }
       .categories .cont_item:nth-child(2) {
         left: 4.5%;
         top: 0; }
       .categories .cont_item:nth-child(3) {
-        bottom: 70px;
+        bottom: 10%;
         left: 17%;
         background-color: rgba(88, 219, 211, 0.7); }
       .categories .cont_item:nth-child(4) {
         left: 29%;
-        top: 11px; }
+        top: 2%; }
       .categories .cont_item:nth-child(5) {
         background-color: rgba(88, 219, 211, 0.7); }
+        .categories .cont_item:nth-child(5) img {
+          height: 48%;
+          width: 88%;
+          position: relative;
+          top: 3%;
+          left: 0.5%; }
       .categories .cont_item:nth-child(6) {
         left: 55%;
-        bottom: 70px; }
+        bottom: 15%; }
       .categories .cont_item:nth-child(7) {
         left: 67%;
-        top: 16px;
+        top: 3%;
         background-color: rgba(88, 219, 211, 0.7); }
       .categories .cont_item:nth-child(8) {
         left: 78%;
@@ -731,10 +765,185 @@ body {
     z-index: 0; }
 
 .page {
+  margin: 0px;
+  padding: 0px;
   width: 100%;
-  height: 100%;
   overflow: hidden; }
 
 .sect2 {
+  position: relative;
   width: 100%;
-  height: 1000px; }
+  height: 1000px;
+  background-color: #FDFDFD; }
+  .sect2 .gran {
+    margin: 0 auto;
+    width: 80%; }
+
+.block {
+  position: absolute;
+  top: -20px; }
+  .block img:last-child {
+    width: 17px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: -12px; }
+  .block img:nth-child(2) {
+    z-index: 3; }
+  .block img:first-child {
+    width: 17px;
+    height: 20px;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: -12px; }
+
+.content1 {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between; }
+  .content1 .subcontent {
+    padding: 30px;
+    width: 60%; }
+    .content1 .subcontent .oplata {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      height: 50px; }
+      .content1 .subcontent .oplata div {
+        font-size: 36px; }
+        .content1 .subcontent .oplata div span {
+          font-weight: bold; }
+      .content1 .subcontent .oplata button {
+        height: 50px;
+        width: 216px;
+        background-color: #D62132;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 28px;
+        border: none;
+        color: #FFFFFF; }
+        .content1 .subcontent .oplata button:hover {
+          background: url(../images/pidarasik.jpg);
+          transition: background .7s;
+          background-position: 0 80%;
+          background-size: cover;
+          height: 70px;
+          width: 236px;
+          transition: .7s;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          border-radius: 3px; }
+        .content1 .subcontent .oplata button span {
+          font-weight: normal;
+          position: relative;
+          right: 3px; }
+        .content1 .subcontent .oplata button img {
+          position: relative;
+          bottom: 3px;
+          left: 3px; }
+    .content1 .subcontent h1 {
+      font-size: calc(24px + 26 * ((100vw - 320px) / 960));
+      font-weight: bold; }
+    .content1 .subcontent .riba {
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 25px;
+      margin: 30px 0;
+      height: 200px;
+      text-overflow: ellipsis; }
+
+.content2 {
+  margin: 50px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  width: 100%;
+  color: #1D1D1D; }
+  .content2 a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #1D1D1D;
+    text-decoration: none; }
+    .content2 a:hover {
+      transition: .5s;
+      color: #D62132; }
+      .content2 a:hover img {
+        border: 1px solid #D62132;
+        transition: border .2s; }
+  .content2_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .content2_item img {
+      border: 1px solid black;
+      width: 200px;
+      height: 210px;
+      margin: 0 0 20px 0; }
+
+.footer {
+  background-color: #1B2330;
+  width: 100%; }
+  .footer .fonl {
+    width: 80%;
+    margin: 0 auto;
+    height: 101px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .footer .fonl div:nth-child(2) {
+      width: 160px;
+      display: flex;
+      justify-content: space-between; }
+  .footer p {
+    opacity: .5;
+    font-size: 16px; }
+  .footer h1 {
+    font-size: 42px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+    color: #626262; }
+    .footer h1 span {
+      color: #06B5A9; }
+
+@media (max-width: 1800px) {
+  .polosa .content {
+    width: 90%; }
+  .categories .cont {
+    height: 400px; }
+  .categories .cont_item {
+    width: 250px;
+    height: 250px; } }
+
+@media (max-width: 1600px) {
+  .polosa .content {
+    width: 90%; } }
+
+@media (max-width: 1400px) {
+  .polosa .content {
+    width: 100%; }
+  .slick-arrow {
+    height: 130vh; }
+  .categories {
+    height: 90vh; }
+    .categories .cont {
+      height: 360px; }
+    .categories .cont_item {
+      width: 225px;
+      height: 225px; }
+  .content1 {
+    height: 600px; }
+    .content1 .subcontent h1 {
+      font-size: 40px; }
+    .content1 .subcontent .riba {
+      height: 250px; } }
