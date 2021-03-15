@@ -566,7 +566,7 @@ body {
 .slick-arrow {
   font-size: 0;
   width: 150px;
-  height: 90vh;
+  height: 100vh;
   position: absolute;
   top: 0px;
   z-index: 1;
@@ -643,7 +643,8 @@ body {
       .polosa .content_item img {
         position: absolute;
         right: 0;
-        bottom: 0; }
+        bottom: 0;
+        height: 98%; }
       .polosa .content_item h3 {
         font-size: 64px; }
       .polosa .content_item h2 {
@@ -658,10 +659,20 @@ body {
       background: #E4CE9A; }
       .polosa .content .two h3 {
         color: #5E4C38; }
+      .polosa .content .two img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 78%; }
     .polosa .content .tree {
       background: #FFA7CE; }
       .polosa .content .tree h3 {
         color: #414049; }
+      .polosa .content .tree img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 69%; }
     .polosa .content .chetire {
       background: #F2CA66;
       padding: 15px; }
@@ -773,7 +784,6 @@ body {
 .sect2 {
   position: relative;
   width: 100%;
-  height: 1000px;
   background-color: #FDFDFD; }
   .sect2 .gran {
     margin: 0 auto;
@@ -813,6 +823,8 @@ body {
       justify-content: space-between;
       height: 50px; }
       .content1 .subcontent .oplata div {
+        display: flex;
+        align-items: center;
         font-size: 36px; }
         .content1 .subcontent .oplata div span {
           font-weight: bold; }
@@ -826,18 +838,6 @@ body {
         font-size: 28px;
         border: none;
         color: #FFFFFF; }
-        .content1 .subcontent .oplata button:hover {
-          background: url(../images/pidarasik.jpg);
-          transition: background .7s;
-          background-position: 0 80%;
-          background-size: cover;
-          height: 70px;
-          width: 236px;
-          transition: .7s;
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          border-radius: 3px; }
         .content1 .subcontent .oplata button span {
           font-weight: normal;
           position: relative;
@@ -854,15 +854,14 @@ body {
       font-weight: normal;
       line-height: 25px;
       margin: 30px 0;
-      height: 200px;
       text-overflow: ellipsis; }
 
 .content2 {
-  margin: 50px 0 0;
+  background-color: #FDFDFD;
+  padding: 70px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 300px;
   width: 100%;
   color: #1D1D1D; }
   .content2 a {
@@ -932,14 +931,12 @@ body {
   .polosa .content {
     width: 90%; } }
 
-@media (max-width: 1400px) {
+@media (max-width: 1425px) {
   .nav .vkladki div:hover .menu {
     width: 600px;
     height: 300px; }
   .polosa .content {
     width: 100%; }
-  .slick-arrow {
-    height: 130vh; }
   .categories {
     height: 90vh; }
     .categories .cont {
@@ -950,6 +947,49 @@ body {
   .content1 {
     height: 600px; }
     .content1 .subcontent h1 {
-      font-size: 40px; }
-    .content1 .subcontent .riba {
-      height: 250px; } }
+      font-size: 40px; } }
+
+@media (max-width: 1300px) {
+  .polosa .content_item {
+    width: 250px;
+    height: 250px; }
+  .categories {
+    height: 90vh; }
+    .categories .cont {
+      height: 360px; }
+    .categories .cont_item {
+      width: 210px;
+      height: 210px; }
+  .content1 .subcontent h1 {
+    font-size: 32px; }
+  .sect2 .gran {
+    width: 90%; }
+    .sect2 .gran .block {
+      left: 5%; } }
+
+@media (max-width: 1160px) {
+  .categories {
+    height: 90vh; }
+    .categories .cont {
+      height: 360px; }
+    .categories .cont_item {
+      width: 200px;
+      height: 200px; }
+  .content1 {
+    height: 670px; }
+    .content1 .subcontent .oplata div {
+      font-size: 28px; }
+    .content1 .subcontent .oplata button {
+      height: 40px;
+      width: 170px;
+      font-size: 22px; }
+  .sect2 .gran {
+    width: 100%; }
+    .sect2 .gran .block {
+      left: 5%; } }
+
+@media (max-width: 1033px) {
+  .content1 {
+    height: 670px; }
+    .content1 .subcontent h1 {
+      font-size: 32px; } }
